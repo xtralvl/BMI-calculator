@@ -68,11 +68,14 @@
       </div>
     </form>
 
+    <img id="man-eating" alt="a man is eating" src="/assets/fundamentals/starter-code/assets/images/image-man-eating.webp">
+
     <!-- RESULT DETAILS AND SUGGESTIONS -->
-    <section aria-labelledby="bmi-meaning-heading">
+    <section id="details-and-suggestions-container" aria-labelledby="bmi-meaning-heading">
       <h4 id="bmi-meaning-heading">What your BMI result means</h4>
-      <p>
-        A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious diet with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for regular physical activity, ideally about 30 minutes daily for five days a week.
+      <p id="text-of-suggestions-based-on-result">
+        A BMI range of <span id="bmi-from"></span> to <span id="bmi-to"></span> is considered a <span id="considered-weight-class"></span>.<br>
+        <span id="generated-suggestions"></span>
       </p>
 
       <div>
@@ -95,34 +98,49 @@
     </section>
 
     <!-- LIMITATIONS -->
-    <section aria-labelledby="limitations-heading">
-      <h4 id="limitations-heading">Limitations of BMI</h4>
+    <section id="limitations" aria-labelledby="limitations-heading">
+      <h5 id="limitations-heading">Limitations of BMI</h5>
       <p>
         Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial to use.
       </p>
 
-      <div>
-        <h5><img src="/assets/fundamentals/starter-code/assets/images/icon-gender.svg" alt="Gender icon" /> Gender</h5>
+      <div class="limitations-card">
+        <div class="card-title">
+            <img src="/assets/fundamentals/starter-code/assets/images/icon-gender.svg" alt="Gender icon" /> 
+            <h6>Gender</h6>
+        </div>
         <p>The development and body fat composition of girls and boys vary with age. Consequently, a child's age and gender are considered when evaluating their BMI.</p>
       </div>
 
-      <div>
-        <h5><img src="/assets/fundamentals/starter-code/assets/images/icon-age.svg" alt="Age icon" /> Age</h5>
+      <div class="limitations-card">
+        <div class="card-title">
+            <img src="/assets/fundamentals/starter-code/assets/images/icon-age.svg" alt="Gender icon" /> 
+            <h6>Age</h6>
+        </div>
         <p>In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content.</p>
       </div>
 
-      <div>
-        <h5><img src="/assets/fundamentals/starter-code/assets/images/icon-muscle.svg" alt="Muscle icon" /> Muscle</h5>
+      <div class="limitations-card">
+        <div class="card-title">
+            <img src="/assets/fundamentals/starter-code/assets/images/icon-muscle.svg" alt="Gender icon" /> 
+            <h6>Muscle</h6>
+        </div>
         <p>BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from fat.</p>
       </div>
 
-      <div>
-        <h5><img src="/assets/fundamentals/starter-code/assets/images/icon-pregnancy.svg" alt="Pregnancy icon" /> Pregnancy</h5>
+      <div class="limitations-card">
+        <div class="card-title">
+            <img src="/assets/fundamentals/starter-code/assets/images/icon-pregnancy.svg" alt="Gender icon" /> 
+            <h6>Pregnancy</h6>
+        </div>
         <p>Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise health risks for both mother and child.</p>
       </div>
 
-      <div>
-        <h5><img src="/assets/fundamentals/starter-code/assets/images/icon-race.svg" alt="Race icon" /> Race</h5>
+      <div class="limitations-card">
+        <div class="card-title">
+            <img src="/assets/fundamentals/starter-code/assets/images/icon-race.svg" alt="Gender icon" /> 
+            <h6>Race</h6>
+        </div>
         <p>Certain health concerns may affect individuals of some Black and Asian origins at lower BMIs than others. To learn more, it is advised to discuss this with your GP or practice nurse.</p>
       </div>
     </section>
@@ -130,6 +148,8 @@
   </main>
 
   <footer>
+    <p>Challenge by <a href="https://www.frontendmentor.io" target="_blank" rel="noopener noreferrer">Frontend Mentor</a></p>
+    <p>Coded by <a id="xtralvl" href="https://github.com/xtralvl" target="_blank" rel="noopener noreferrer">@xtralvl</a></p>
 
   </footer>
 
