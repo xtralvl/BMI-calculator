@@ -1,0 +1,52 @@
+@media (max-width: 600px) {
+  /* === HTML AND BODY === */
+  html, body {
+    margin: 0;
+    text-align: center;
+  }
+  /* === HERO === */
+  header {
+    background: linear-gradient(to left, hsl(209, 77%, 86%), hsl(0, 0%, 100%));
+    width: 100%;
+    height: 35rem;
+    border-radius: 0 0 30px 30px;
+  }
+  header .header-content {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: center;
+  }
+  header h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 2.6rem;
+    padding: 0 1rem;
+  }
+  header p {
+    color: rgba(0, 0, 0, 0.55);
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  /* === DIFFERENT SECTIONS === */
+  main,
+  form,
+  section {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  form {
+    position: relative;
+    top: -8rem;
+    border: 1px solid red;
+    background-color: white;
+    border-radius: 15px;
+  }
+  form #results-container {
+    background-color: blue;
+  }
+  #logo {
+    margin: 2rem 0 0 0;
+    width: 2.5rem;
+  }
+}
+
+/*# sourceMappingURL=mobile.css.map */
