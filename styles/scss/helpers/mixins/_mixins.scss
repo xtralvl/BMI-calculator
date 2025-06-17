@@ -1,4 +1,4 @@
-@mixin light-blue-gradient-bg($start-color: hsl(209, 77%, 86%), $end-color: hsl(0, 0%, 100%), $direction: to left) {
+@mixin light-blue-gradient-bg($start-color: hsl(208, 65%, 88%), $end-color: hsl(0, 0%, 100%), $direction: to left) {
   background: linear-gradient($direction, $start-color, $end-color);
 }
 
