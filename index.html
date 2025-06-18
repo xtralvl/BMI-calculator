@@ -42,29 +42,83 @@
           <label for="imperial">Imperial</label>
         </div>
       </fieldset>
+
+    <!-- METRIC -->
       
-      <div id="measure-container">
+      <div class="measure-container-metric">
+
         <div class="input-wrapper">
-          <label for="height">Height</label>
+          <label for="height-metric">Height</label>
           <div class="input-container">
-            <input type="number" id="height" name="height" value="0" />
-            <span class="unit">cm</span>
+            <input type="number" id="height-metric" name="height-metric" value="0" />
+            <span id="cm" class="unit">cm</span>
           </div>
+          <p id="error-message-height-metric" class="error-message">Height should be between 0cm and 300cm</p>
         </div>
       
         <div class="input-wrapper">
-          <label for="weight">Weight</label>
+          <label for="weight-metric">Weight</label>
           <div class="input-container">
-            <input type="number" id="weight" name="weight" value="0" />
-            <span class="unit">kg</span>
+            <input type="number" id="weight-metric" name="weight-metric" value="0" />
+            <span id="kg" class="unit">kg</span>
           </div>
+          <p id="error-message-weight-metric" class="error-message">Weight should be between 0kg and 500kg</p>
         </div>
+
       </div>
+
+    <!-- IMPERIAL -->
+
+      <div class="measure-container-imperial">
+
+      <div id="imperial-height-container">
+
+      <label for="height-ft">Height</label>  
+        <div class="input-wrapper">
+          <div class="input-container">
+            <input type="number" id="height-ft" name="height-ft" value="0"  />
+            <span class="unit">ft</span>
+          </div>
+        </div>  
+
+        <label for="height-in" class="sr-only">Inches</label>        
+        <div class="input-wrapper">
+            <div class="input-container">
+              <input type="number" id="height-in" name="height-in" value="0"  />
+              <span class="unit">in</span>
+            </div>
+        </div>
+
+    </div>    
+        
+
+    <div id="imperial-weight-container">
+
+      <label for="weight-st">Weight</label>
+        <div class="input-wrapper">
+            <div class="input-container">
+              <input type="number" id="weight-st" name="weight-st" value="0" />
+              <span class="unit">st</span>
+            </div>
+        </div> 
+        
+      <label for="weight-lbs" class="sr-only">Pounds</label>    
+        <div class="input-wrapper">
+            <div class="input-container">
+              <input type="number" id="weight-lbs" name="weight-lbs" value="0"/>
+              <span class="unit">lbs</span>
+            </div>
+        </div>  
+
+      </div>
+
+    </div>  
+
       
       <!-- RESULTS -->
       <div id="results-container" aria-live="polite">
         <h3>Welcome!</h3>
-        <p>Enter your height and weight and you’ll see your BMI result here</p>
+        <p id="generated-results">Enter your height and weight and you’ll see your BMI result here</p>
       </div>
     </form>
 
@@ -153,7 +207,7 @@
 
   </footer>
 
-  <!-- JAVASCRIPT -->
-  <script></script>
+<!-- JAVASCRIPT -->
+<script src="/javascript/script.js"></script>
 </body>
 </html>
