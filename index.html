@@ -81,7 +81,7 @@
           </div>
         </div>  
 
-        <label for="height-in" class="sr-only">Inches</label>        
+        <label id="inches-label" for="height-in" class="sr-only">Inches</label>        
         <div class="input-wrapper">
             <div class="input-container">
               <input type="number" id="height-in" name="height-in" value="0"  />
@@ -102,7 +102,7 @@
             </div>
         </div> 
         
-      <label for="weight-lbs" class="sr-only">Pounds</label>    
+      <label id="lbs-label" for="weight-lbs" class="sr-only">Pounds</label>    
         <div class="input-wrapper">
             <div class="input-container">
               <input type="number" id="weight-lbs" name="weight-lbs" value="0"/>
@@ -117,8 +117,8 @@
       
       <!-- RESULTS -->
       <div id="results-container" aria-live="polite">
-        <h3>Welcome!</h3>
-        <p id="generated-results">Enter your height and weight and you’ll see your BMI result here</p>
+        <h3 id="generated-results-header">Welcome!</h3>
+        <p id="generated-results-paragraph">Enter your height and weight and you’ll see your BMI result here</p>
       </div>
     </form>
 

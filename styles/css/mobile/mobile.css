@@ -191,6 +191,10 @@
     gap: 0.75rem;
     display: none;
   }
+  form .measure-container-imperial #inches-label,
+  form .measure-container-imperial #lbs-label {
+    display: none;
+  }
   form .measure-container-imperial label {
     font-weight: 600;
     text-align: left;

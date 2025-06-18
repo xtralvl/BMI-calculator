@@ -227,12 +227,16 @@ form {
 
     /* === IMPERIAL === */
 
-
       .measure-container-imperial {
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
         display: none; // display only when selected, with javascript
+
+        #inches-label,
+        #lbs-label {
+          display: none;
+        }
       
         label {
           font-weight: 600;
