@@ -2,7 +2,7 @@
 @use '../helpers/variables/variables' as var;
 
 
-@media (max-width: 600px) {
+@media (min-width: 600px) and (max-width: 900px) {
 
 /* === HTML AND BODY === */   
 
@@ -57,17 +57,18 @@ main {
 form {
     padding: 0.5rem;
     position: relative;
-    top: -8rem;
+    top: -14rem;
     background-color: white;
     border-radius: var.$radius-15;
     display: grid;
     box-shadow: 0 25px 26px rgba(0, 0, 0, 0.1);
 
-
     h2 {
         font-family: var.$primary-font;
         font-size: 1.25rem;
         color: var.$primary-header-color-greyish;
+        text-align: left;
+        margin-left: 0.8rem;
     }
 
     fieldset {
@@ -105,6 +106,7 @@ form {
               cursor: pointer;
               font-size: 0.8rem;
               user-select: none;
+
           
               &::before {
                 content: '';
@@ -118,7 +120,7 @@ form {
                 border: 1px solid #ccc;
                 background-color: transparent;
                 transition: all 0.3s ease;
-              }
+              } 
           
               &::after {
                 content: '';
@@ -132,8 +134,8 @@ form {
                 background-color: transparent;
                 transition: background-color 0.3s ease;
               }
-            }
-          
+            } 
+            
             input[type="radio"]:checked + label::before {
               background-color: #E1E7FE; // lightblue bg
               border: none;
@@ -146,10 +148,6 @@ form {
       }
 
     /* === METRIC === */
-
-      .measure-container-metric {
-        // display: none !important;
-      }
 
       .measure-container-metric {
         display: flex;
@@ -319,13 +317,13 @@ form {
       }
 
 
-/* === RESULTS CONTAINER INSIDE FORM === */
+/* === RESULTS CONTAINER INSIDE THE FORM === */
 
     #results-container {
         font-family: var.$primary-font;
         background-color: #345FF6;
         margin: 1.5rem 1rem;
-        border-radius: var.$radius-15;
+        border-radius: 15px 70px 70px 15px;
         text-align: left;
         padding: 1rem 4rem 1rem 1.5rem;
         color: white;
@@ -335,51 +333,70 @@ form {
         }
     }
 }
-
 /* === END OF FORM === */
+
+
+/* === DETAILS AND SUGGESTIONS === */
+#healthy-habits {
+    background-color: hsl(208, 65%, 88, 0.15);
+    margin: 6rem -2rem 3rem -2rem;
+    padding: 2rem;
+
+    #healthy-eating-container,
+    #regular-exercise-container,
+    #adequate-sleep-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        padding: 0 !important;
+
+        img {
+            grid-column: 1;
+            grid-row: 1;
+            width: 3rem;
+            margin-top: 1rem;
+        }
+
+        h5 {
+            grid-column: 1;
+            margin-left: 5rem;
+            grid-row: 1;
+            font-family: var.$primary-font;
+            color: var.$primary-header-color-greyish;
+            font-size: 1rem;
+              
+        }
+
+        p {
+            grid-column: 1 / 3;
+            grid-row: 2;
+            font-family: var.$primary-font;
+            color: var.$primary-paragraph-color-greyish;
+            font-size: .9rem;
+        }
+    }
+}
+
+#man-photo-and-longer-suggestions-container-tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin:-8rem -1rem 1rem -2rem;
+}
 
 #man-eating {
     max-width: 100%;
     position: relative;
-    top: -5rem;
     margin-bottom: 0;
-}
-
-/* === DETAILS AND SUGGESTIONS === */
-#healthy-habits {
-  background-color: hsl(208, 65%, 88, 0.15);
-  margin: 5rem -2rem 3rem -2rem;
-  padding: 2rem;
-
-  #healthy-eating-container,
-  #regular-exercise-container,
-  #adequate-sleep-container {
-      img {
-          width: 3rem;
-          margin-top: 1rem;
-      }
-
-      h5 {
-          font-family: var.$primary-font;
-          color: var.$primary-header-color-greyish;
-          font-size: 1rem;
-            
-      }
-
-      p {
-          font-family: var.$primary-font;
-          color: var.$primary-paragraph-color-greyish;
-          font-size: .9rem;
-      }
-  }
 }
 
 
 #details-and-suggestions-container {
     text-align: left;
+    padding: 1rem 1rem 1rem 1.5rem;
+
 
     h4 {
-        margin-top: -1rem;
         font-size: 1.7rem;
         font-family: var.$primary-font;
         font-weight:normal;
@@ -392,35 +409,34 @@ form {
         font-size: .9rem;
         color: var.$primary-paragraph-color-greyish;
     }
-
-    img {
-        width: 3rem;
-        margin-top: 1rem;
-    }
-
-    h5 {
-        font-family: var.$primary-font;
-        color: var.$primary-header-color-greyish;
-        font-size: 1rem;    
-    }
-
-    p {
-        font-family: var.$primary-font;
-        color: var.$primary-paragraph-color-greyish;
-        font-size: .9rem;
-    }
-
 }
 
 /* === LIMITATIONS === */
 
 #limitations {
 
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    #limitations-cards-container {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 2.5rem;
+
+        #race {
+            grid-column: 1 / 3;
+            margin-left: 9rem;
+            margin-right: 9rem;
+        }
+
+    }
+
     #limitations-heading {
         font-family: var.$primary-font;
         color: var.$primary-header-color-greyish;
         font-weight: lighter;
-        margin-top: 9rem;
+        margin-top: 5rem;
         font-size: 1.8rem;
     }
 
@@ -439,7 +455,7 @@ form {
         height: auto;
         text-align: left;
         padding: .3rem 1.5rem;
-        margin: 2rem 0;
+        margin: 1rem 0.5rem;
 
         .card-title {
             display: flex;
@@ -470,6 +486,7 @@ footer {
 
     p {
         margin: .3rem;
+        font-size: .8rem;
     }
 
     a {
@@ -493,8 +510,6 @@ footer {
     color: red;
     font-family: var.$primary-font;
     display: none;
-
 }
-
 
 }

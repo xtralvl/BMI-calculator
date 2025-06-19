@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BMI Calculator</title>
   <link rel="stylesheet" href="/styles/css/mobile/mobile.css" />
+  <link rel="stylesheet" href="/styles/css/tablet/tablet.css" />
 </head>
 
 <body>
@@ -39,7 +40,7 @@
       
         <div class="radio-option">
           <input type="radio" id="imperial" name="unit" value="imperial" />
-          <label for="imperial">Imperial</label>
+          <label id="imperial-radio-button" for="imperial">Imperial</label>
         </div>
       </fieldset>
 
@@ -127,6 +128,7 @@
       </div>
     </form>
 
+  <div id="man-photo-and-longer-suggestions-container-tablet">  
     <img id="man-eating" alt="a man is eating" src="/assets/fundamentals/starter-code/assets/images/image-man-eating.webp">
 
     <!-- RESULT DETAILS AND SUGGESTIONS -->
@@ -135,34 +137,39 @@
       <p id="text-of-suggestions-based-on-result">
         <span id="longer-suggestions"> You'll see recommendations here once you've entered your details.</span>
       </p>
+    </div>    
 
-      <div>
+    <div id="healthy-habits">   
+      <div id="healthy-eating-container" >
         <img src="/assets/fundamentals/starter-code/assets/images/icon-eating.svg" alt="Icon representing healthy eating" />
         <h5>Healthy eating</h5>
         <p>Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and mood.</p>
       </div>
 
-      <div>
+      <div id="regular-exercise-container" >
         <img src="/assets/fundamentals/starter-code/assets/images/icon-exercise.svg" alt="Icon representing exercise" />
         <h5>Regular exercise</h5>
         <p>Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness and longevity.</p>
       </div>
 
-      <div>
+      <div id="adequate-sleep-container" >
         <img src="/assets/fundamentals/starter-code/assets/images/icon-sleep.svg" alt="Icon representing sleep" />
         <h5>Adequate sleep</h5>
         <p>Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and rejuvenation.</p>
       </div>
+    </div>   
     </section>
 
     <!-- LIMITATIONS -->
     <section id="limitations" aria-labelledby="limitations-heading">
+
       <h5 id="limitations-heading">Limitations of BMI</h5>
       <p>
         Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial to use.
       </p>
 
-      <div class="limitations-card">
+    <div id="limitations-cards-container">  
+      <div id="gender" class="limitations-card">
         <div class="card-title">
             <img src="/assets/fundamentals/starter-code/assets/images/icon-gender.svg" alt="Gender icon" /> 
             <h6>Gender</h6>
@@ -170,7 +177,7 @@
         <p>The development and body fat composition of girls and boys vary with age. Consequently, a child's age and gender are considered when evaluating their BMI.</p>
       </div>
 
-      <div class="limitations-card">
+      <div id="age" class="limitations-card">
         <div class="card-title">
             <img src="/assets/fundamentals/starter-code/assets/images/icon-age.svg" alt="Gender icon" /> 
             <h6>Age</h6>
@@ -178,7 +185,7 @@
         <p>In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content.</p>
       </div>
 
-      <div class="limitations-card">
+      <div id="muscle" class="limitations-card">
         <div class="card-title">
             <img src="/assets/fundamentals/starter-code/assets/images/icon-muscle.svg" alt="Gender icon" /> 
             <h6>Muscle</h6>
@@ -186,7 +193,7 @@
         <p>BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from fat.</p>
       </div>
 
-      <div class="limitations-card">
+      <div id="pregnancy" class="limitations-card">
         <div class="card-title">
             <img src="/assets/fundamentals/starter-code/assets/images/icon-pregnancy.svg" alt="Gender icon" /> 
             <h6>Pregnancy</h6>
@@ -194,13 +201,15 @@
         <p>Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise health risks for both mother and child.</p>
       </div>
 
-      <div class="limitations-card">
+      <div id="race" class="limitations-card">
         <div class="card-title">
             <img src="/assets/fundamentals/starter-code/assets/images/icon-race.svg" alt="Gender icon" /> 
             <h6>Race</h6>
         </div>
         <p>Certain health concerns may affect individuals of some Black and Asian origins at lower BMIs than others. To learn more, it is advised to discuss this with your GP or practice nurse.</p>
       </div>
+    </div>
+
     </section>
 
   </main>
