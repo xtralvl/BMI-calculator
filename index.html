@@ -69,6 +69,7 @@
 
     <!-- IMPERIAL -->
 
+    <!-- IMPERIAL HEIGHT -->
       <div class="measure-container-imperial">
 
       <div id="imperial-height-container">
@@ -77,38 +78,42 @@
         <div class="input-wrapper">
           <div class="input-container">
             <input type="number" id="height-ft" name="height-ft"   />
-            <span class="unit">ft</span>
+            <span id="ft" class="unit">ft</span>
           </div>
+        <p id="error-message-feet" class="error-message">Feet should be between 0 and 9 </p>
         </div>  
 
         <label id="inches-label" for="height-in" class="sr-only">Inches</label>        
         <div class="input-wrapper">
             <div class="input-container">
               <input type="number" id="height-in" name="height-in"   />
-              <span class="unit">in</span>
+              <span id="inch" class="unit">in</span>
             </div>
+        <p id="error-message-inch" class="error-message">Inches should be between 0 and 11 </p>
         </div>
 
     </div>    
         
-
+    <!-- IMPERIAL WEIGHT -->
     <div id="imperial-weight-container">
 
       <label for="weight-st">Weight</label>
         <div class="input-wrapper">
             <div class="input-container">
               <input type="number" id="weight-st" name="weight-st" />
-              <span class="unit">st</span>
+              <span id="st" class="unit">st</span>
             </div>
+        <p id="error-message-st" class="error-message">Stones should be between 0 and 50 </p>
         </div> 
         
       <label id="lbs-label" for="weight-lbs" class="sr-only">Pounds</label>    
         <div class="input-wrapper">
             <div class="input-container">
               <input type="number" id="weight-lbs" name="weight-lbs" />
-              <span class="unit">lbs</span>
+              <span id="lbs" class="unit">lbs</span>
             </div>
-        </div>  
+        <p id="error-message-lbs" class="error-message">Pounds should be between 0 and 13 </p>
+        </div> 
 
       </div>
 
@@ -201,7 +206,7 @@
   </main>
 
   <footer>
-    <p>Challenge by <a href="https://www.frontendmentor.io" target="_blank" rel="noopener noreferrer">Frontend Mentor</a></p>
+    <p>Challenge by <a id="frontend-mentor" href="https://www.frontendmentor.io" target="_blank" rel="noopener noreferrer">Frontend Mentor</a></p>
     <p>Coded by <a id="xtralvl" href="https://github.com/xtralvl" target="_blank" rel="noopener noreferrer">@xtralvl</a></p>
 
   </footer>

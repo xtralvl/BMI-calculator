@@ -360,6 +360,9 @@
     text-decoration: none;
     color: black;
   }
+  footer #frontend-mentor {
+    text-decoration: underline;
+  }
   footer #xtralvl {
     color: hsl(203, 100%, 40%);
     text-decoration: none;
