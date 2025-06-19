@@ -121,8 +121,21 @@ function addZeroIfEmptyOnBlur(inputField) {
 // === METRIC BMI CALCULATION === //
 function calculateMetricBmi() {
 
+    // == DEFAULT TEXTS == //
+    const defaultHeaderText = 'Welcome!';
+    const defaultParagraphText = 'Enter your height and weight and you’ll see your BMI result here.';
+    const defaultLongSuggestionText = "<p>You'll see recommendations here once you've entered your details.</p>";
+
 
     if (metricButton.checked) {
+
+        if (metricHeight.value.trim() === '' || metricWeight.value.trim() === '') {
+            resultHeader.textContent = defaultHeaderText;
+            resultParagraph.innerHTML = defaultParagraphText;
+            longerSuggestions.innerHTML = defaultLongSuggestionText;
+            return;
+        }
+
         const weight = Number(metricWeight.value);
         const height = Number(metricHeight.value);
 
@@ -153,18 +166,18 @@ function calculateMetricBmi() {
 
         function getBmiSuggestion(bmi) {
             bmi = Number(bmi);
-            if (bmi < 18.5) return "You’re underweight. Eat nutrient-rich foods and consult a doctor.";
-            if (bmi < 25) return "You’re at a healthy weight. Maintain your current habits!";
-            if (bmi < 30) return "You're overweight. Try increasing activity and improving diet.";
-            if (bmi < 40) return "You're obese. Consider medical and nutritional support.";
-            if (bmi> 40) return "Severe obesity. Seek help from healthcare professionals.";
+            if (bmi < 18.5) return "<strong><p>You’re underweight.</p></strong> <p>Eat nutrient-rich foods and consult a doctor.</p> <p>Scroll down for longer suggestions.</p>";
+            if (bmi < 25) return "<strong><p>You’re at a healthy weight.</p></strong> <p>Maintain your current habits!</p> <p>Scroll down for longer suggestions.</p>";
+            if (bmi < 30) return "<strong><p>You’re overweight.</p></strong> <p>Try increasing activity and improving diet.</p> <p>Scroll down for longer suggestions.</p>";
+            if (bmi < 40) return "<strong><p>You’re obese.</p></strong> <p>Consider medical and nutritional support.</p> <p>Scroll down for longer suggestions.</p>";
+            if (bmi> 40) return "<strong><p>You’re severely obese.</p></strong> <p>Seek help from healthcare professionals.</p> <p>Scroll down for longer suggestions.</p>";
         }
 
         const category = getBmiCategory(bmi);
         const suggestion = getBmiSuggestion(bmi);
 
         resultHeader.textContent = `Your BMI is ${bmi} – ${category}`;
-        resultParagraph.textContent = suggestion;
+        resultParagraph.innerHTML = suggestion;
 
         // === 'WHAT YOUR BMI RESULT MEANS' SECTION === //
 
@@ -178,13 +191,15 @@ function calculateMetricBmi() {
         }
 
         const generatedLongerSuggestions = getLongerSuggestions(bmi);
-        longerSuggestions.innerHTML = `${generatedLongerSuggestions}`;
+
+        generatedLongerSuggestions ? longerSuggestions.innerHTML = `${generatedLongerSuggestions}` : longerSuggestions.innerHTML = "<p>You'll see recommendations here once you've entered your details.";
+
     }
 }
 
 // === CLEAR INITIAL ZERO ON FOCUS + ADD ZERO ON BLUR === //
-inputs.forEach(input => clearInitialZeroOnFocus(input));
-inputs.forEach(input => addZeroIfEmptyOnBlur(input));
+ /* inputs.forEach(input => clearInitialZeroOnFocus(input));
+inputs.forEach(input => addZeroIfEmptyOnBlur(input)); */
 
 // === REAL TIME CALCULATION === //
 metricHeight.addEventListener('input', calculateMetricBmi);

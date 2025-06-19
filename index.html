@@ -50,7 +50,7 @@
         <div class="input-wrapper">
           <label for="height-metric">Height</label>
           <div class="input-container">
-            <input type="number" id="height-metric" name="height-metric" value="0" />
+            <input type="number" id="height-metric" name="height-metric"  />
             <span id="cm" class="unit">cm</span>
           </div>
           <p id="error-message-height-metric" class="error-message">Height should be between 0cm and 300cm</p>
@@ -59,7 +59,7 @@
         <div class="input-wrapper">
           <label for="weight-metric">Weight</label>
           <div class="input-container">
-            <input type="number" id="weight-metric" name="weight-metric" value="0" />
+            <input type="number" id="weight-metric" name="weight-metric" />
             <span id="kg" class="unit">kg</span>
           </div>
           <p id="error-message-weight-metric" class="error-message">Weight should be between 0kg and 500kg</p>
@@ -76,7 +76,7 @@
       <label for="height-ft">Height</label>  
         <div class="input-wrapper">
           <div class="input-container">
-            <input type="number" id="height-ft" name="height-ft" value="0"  />
+            <input type="number" id="height-ft" name="height-ft"   />
             <span class="unit">ft</span>
           </div>
         </div>  
@@ -84,7 +84,7 @@
         <label id="inches-label" for="height-in" class="sr-only">Inches</label>        
         <div class="input-wrapper">
             <div class="input-container">
-              <input type="number" id="height-in" name="height-in" value="0"  />
+              <input type="number" id="height-in" name="height-in"   />
               <span class="unit">in</span>
             </div>
         </div>
@@ -97,7 +97,7 @@
       <label for="weight-st">Weight</label>
         <div class="input-wrapper">
             <div class="input-container">
-              <input type="number" id="weight-st" name="weight-st" value="0" />
+              <input type="number" id="weight-st" name="weight-st" />
               <span class="unit">st</span>
             </div>
         </div> 
@@ -105,7 +105,7 @@
       <label id="lbs-label" for="weight-lbs" class="sr-only">Pounds</label>    
         <div class="input-wrapper">
             <div class="input-container">
-              <input type="number" id="weight-lbs" name="weight-lbs" value="0"/>
+              <input type="number" id="weight-lbs" name="weight-lbs" />
               <span class="unit">lbs</span>
             </div>
         </div>  
@@ -118,7 +118,7 @@
       <!-- RESULTS -->
       <div id="results-container" aria-live="polite">
         <h3 id="generated-results-header">Welcome!</h3>
-        <p id="generated-results-paragraph">Enter your height and weight and you’ll see your BMI result here</p>
+        <p id="generated-results-paragraph">Enter your height and weight and you’ll see your BMI result here.</p>
       </div>
     </form>
 
@@ -128,7 +128,7 @@
     <section id="details-and-suggestions-container" aria-labelledby="bmi-meaning-heading">
       <h4 id="bmi-meaning-heading">What your BMI result means</h4>
       <p id="text-of-suggestions-based-on-result">
-        <span id="longer-suggestions"></span>
+        <span id="longer-suggestions"> You'll see recommendations here once you've entered your details.</span>
       </p>
 
       <div>
