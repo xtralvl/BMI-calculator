@@ -276,8 +276,6 @@ form {
                 font-size: 1rem;
                 height: 3.5rem;
                 box-sizing: border-box;
-
-                
               }
 
               input:focus {
@@ -361,7 +359,7 @@ form {
 
     #text-of-suggestions-based-on-result {
         margin-top: -1rem;
-        margin-bottom: 7rem;
+        margin-bottom: 3rem;
         font-family: var.$primary-font;
         font-size: .9rem;
         color: var.$primary-paragraph-color-greyish;
