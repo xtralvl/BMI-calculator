@@ -60,6 +60,7 @@ function swithToMetric() {
     };      
 swithToMetric();
 
+
 // === FORM VALIDATION === //
 
 // === METRIC HEIGHT ERROR STATES === //
@@ -94,8 +95,33 @@ metricWeight.addEventListener('input', () => {
     }
 });
 
+// === ALL INPUTS === //
+const inputs = [metricHeight, metricWeight, feetInput, inchInput, stInput, lbsInput ];
+
+// === CLEAR INITIAL ZERO VALUE FROM INPUT FIELD WHEN TYPING STARTS === //
+function clearInitialZeroOnFocus(inputField) {
+    inputField.addEventListener('focus', () => {
+        if (inputField.value === '0') {
+            inputField.select();
+        }
+    });
+};
+
+function addZeroIfEmptyOnBlur(inputField) {
+    inputField.addEventListener('blur', () => {
+        if (inputField.value.trim() === '') {
+            inputField.value = '0';
+        }
+    });
+};
+
+
+
+
 // === METRIC BMI CALCULATION === //
 function calculateMetricBmi() {
+
+
     if (metricButton.checked) {
         const weight = Number(metricWeight.value);
         const height = Number(metricHeight.value);
@@ -153,10 +179,14 @@ function calculateMetricBmi() {
 
         const generatedLongerSuggestions = getLongerSuggestions(bmi);
         longerSuggestions.innerHTML = `${generatedLongerSuggestions}`;
-
     }
 }
 
+// === CLEAR INITIAL ZERO ON FOCUS + ADD ZERO ON BLUR === //
+inputs.forEach(input => clearInitialZeroOnFocus(input));
+inputs.forEach(input => addZeroIfEmptyOnBlur(input));
+
+// === REAL TIME CALCULATION === //
 metricHeight.addEventListener('input', calculateMetricBmi);
 metricWeight.addEventListener('input', calculateMetricBmi);
 
