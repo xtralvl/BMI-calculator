@@ -6,129 +6,135 @@
   <title>BMI Calculator</title>
   <link rel="stylesheet" href="/styles/css/mobile/mobile.css" />
   <link rel="stylesheet" href="/styles/css/tablet/tablet.css" />
+  <link rel="stylesheet" href="/styles/css/desktop/desktop.css" />
+
 </head>
 
 <body>
 
 
-  <!-- HERO -->
-  <header>
-    <div class="header-content">
-      <img id="logo" src="/assets/fundamentals/starter-code/assets/images/logo.svg" alt="BMI Calculator Logo" />
-      <h1>Body Mass Index Calculator</h1>
-      <p>
-        Better understand your weight in relation to your height using our body mass index (BMI) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.
-      </p>
-    </div>
-  </header>
+  <div id="hero-and-form-wrapper-for-desktop" >
+    <div id="background-overlay-desktop-header"> </div>
+    <!-- HERO -->
+    <header>
+        <div class="header-content">
+        <img id="logo" src="/assets/fundamentals/starter-code/assets/images/logo.svg" alt="BMI Calculator Logo" />
+        <h1>Body Mass Index Calculator</h1>
+        <p>
+            Better understand your weight in relation to your height using our body mass index (BMI) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.
+        </p>
+        </div>
+    </header>
 
-  <!-- MAIN -->
-  <main id="main-content">
+    <!-- MAIN -->
+    <main id="main-content">
 
-    <!-- FORM -->
-    <form aria-labelledby="bmi-form-heading">
+        <!-- FORM -->
+        <form aria-labelledby="bmi-form-heading">
+            
+        <h2 id="bmi-form-heading">Enter your details below</h2>
+
+        <fieldset>
+            <legend class="sr-only">Select unit</legend>
         
-      <h2 id="bmi-form-heading">Enter your details below</h2>
+            <div class="radio-option">
+            <input type="radio" id="metric" name="unit" value="metric" checked />
+            <label for="metric">Metric</label>
+            </div>
+        
+            <div class="radio-option">
+            <input type="radio" id="imperial" name="unit" value="imperial" />
+            <label id="imperial-radio-button" for="imperial">Imperial</label>
+            </div>
+        </fieldset>
 
-      <fieldset>
-        <legend class="sr-only">Select unit</legend>
-      
-        <div class="radio-option">
-          <input type="radio" id="metric" name="unit" value="metric" checked />
-          <label for="metric">Metric</label>
-        </div>
-      
-        <div class="radio-option">
-          <input type="radio" id="imperial" name="unit" value="imperial" />
-          <label id="imperial-radio-button" for="imperial">Imperial</label>
-        </div>
-      </fieldset>
+        <!-- METRIC -->
+        
+        <div class="measure-container-metric">
 
-    <!-- METRIC -->
-      
-      <div class="measure-container-metric">
+            <div class="input-wrapper">
+            <label for="height-metric">Height</label>
+            <div class="input-container">
+                <input type="number" id="height-metric" name="height-metric"  />
+                <span id="cm" class="unit">cm</span>
+            </div>
+            <p id="error-message-height-metric" class="error-message">Height should be between 0cm and 300cm</p>
+            </div>
+        
+            <div class="input-wrapper">
+            <label for="weight-metric">Weight</label>
+            <div class="input-container">
+                <input type="number" id="weight-metric" name="weight-metric" />
+                <span id="kg" class="unit">kg</span>
+            </div>
+            <p id="error-message-weight-metric" class="error-message">Weight should be between 0kg and 500kg</p>
+            </div>
 
-        <div class="input-wrapper">
-          <label for="height-metric">Height</label>
-          <div class="input-container">
-            <input type="number" id="height-metric" name="height-metric"  />
-            <span id="cm" class="unit">cm</span>
-          </div>
-          <p id="error-message-height-metric" class="error-message">Height should be between 0cm and 300cm</p>
-        </div>
-      
-        <div class="input-wrapper">
-          <label for="weight-metric">Weight</label>
-          <div class="input-container">
-            <input type="number" id="weight-metric" name="weight-metric" />
-            <span id="kg" class="unit">kg</span>
-          </div>
-          <p id="error-message-weight-metric" class="error-message">Weight should be between 0kg and 500kg</p>
         </div>
 
-      </div>
+        <!-- IMPERIAL -->
 
-    <!-- IMPERIAL -->
+        <!-- IMPERIAL HEIGHT -->
+        <div class="measure-container-imperial">
 
-    <!-- IMPERIAL HEIGHT -->
-      <div class="measure-container-imperial">
+        <div id="imperial-height-container">
 
-      <div id="imperial-height-container">
+        <label for="height-ft">Height</label>  
+            <div class="input-wrapper">
+            <div class="input-container">
+                <input type="number" id="height-ft" name="height-ft"   />
+                <span id="ft" class="unit">ft</span>
+            </div>
+            <p id="error-message-feet" class="error-message">Feet should be between 0 and 9 </p>
+            </div>  
 
-      <label for="height-ft">Height</label>  
-        <div class="input-wrapper">
-          <div class="input-container">
-            <input type="number" id="height-ft" name="height-ft"   />
-            <span id="ft" class="unit">ft</span>
-          </div>
-        <p id="error-message-feet" class="error-message">Feet should be between 0 and 9 </p>
+            <label id="inches-label" for="height-in" class="sr-only">Inches</label>        
+            <div class="input-wrapper">
+                <div class="input-container">
+                <input type="number" id="height-in" name="height-in"   />
+                <span id="inch" class="unit">in</span>
+                </div>
+            <p id="error-message-inch" class="error-message">Inches should be between 0 and 11 </p>
+            </div>
+
+        </div>    
+            
+        <!-- IMPERIAL WEIGHT -->
+        <div id="imperial-weight-container">
+
+        <label for="weight-st">Weight</label>
+            <div class="input-wrapper">
+                <div class="input-container">
+                <input type="number" id="weight-st" name="weight-st" />
+                <span id="st" class="unit">st</span>
+                </div>
+            <p id="error-message-st" class="error-message">Stones should be between 0 and 50 </p>
+            </div> 
+            
+        <label id="lbs-label" for="weight-lbs" class="sr-only">Pounds</label>    
+            <div class="input-wrapper">
+                <div class="input-container">
+                <input type="number" id="weight-lbs" name="weight-lbs" />
+                <span id="lbs" class="unit">lbs</span>
+                </div>
+            <p id="error-message-lbs" class="error-message">Pounds should be between 0 and 13 </p>
+            </div> 
+
+        </div>
+
         </div>  
 
-        <label id="inches-label" for="height-in" class="sr-only">Inches</label>        
-        <div class="input-wrapper">
-            <div class="input-container">
-              <input type="number" id="height-in" name="height-in"   />
-              <span id="inch" class="unit">in</span>
-            </div>
-        <p id="error-message-inch" class="error-message">Inches should be between 0 and 11 </p>
+        <!-- RESULTS -->
+        <div id="results-container" aria-live="polite">
+            <h3 id="generated-results-header">Welcome!</h3>
+            <p id="generated-results-paragraph">Enter your height and weight and you’ll see your BMI result here.</p>
         </div>
+        </form>
+    </div>
 
-    </div>    
-        
-    <!-- IMPERIAL WEIGHT -->
-    <div id="imperial-weight-container">
-
-      <label for="weight-st">Weight</label>
-        <div class="input-wrapper">
-            <div class="input-container">
-              <input type="number" id="weight-st" name="weight-st" />
-              <span id="st" class="unit">st</span>
-            </div>
-        <p id="error-message-st" class="error-message">Stones should be between 0 and 50 </p>
-        </div> 
-        
-      <label id="lbs-label" for="weight-lbs" class="sr-only">Pounds</label>    
-        <div class="input-wrapper">
-            <div class="input-container">
-              <input type="number" id="weight-lbs" name="weight-lbs" />
-              <span id="lbs" class="unit">lbs</span>
-            </div>
-        <p id="error-message-lbs" class="error-message">Pounds should be between 0 and 13 </p>
-        </div> 
-
-      </div>
-
-    </div>  
-
-      
-      <!-- RESULTS -->
-      <div id="results-container" aria-live="polite">
-        <h3 id="generated-results-header">Welcome!</h3>
-        <p id="generated-results-paragraph">Enter your height and weight and you’ll see your BMI result here.</p>
-      </div>
-    </form>
 
   <div id="man-photo-and-longer-suggestions-container-tablet">  
+    <img id="left-curve-line" src="/assets/fundamentals/starter-code/assets/images/pattern-curved-line-left.svg" >
     <img id="man-eating" alt="a man is eating" src="/assets/fundamentals/starter-code/assets/images/image-man-eating.webp">
 
     <!-- RESULT DETAILS AND SUGGESTIONS -->
@@ -162,10 +168,11 @@
 
     <!-- LIMITATIONS -->
     <section id="limitations" aria-labelledby="limitations-heading">
-
+   
+    <div id="first-grid-row-limitations">
       <h5 id="limitations-heading">Limitations of BMI</h5>
-      <p>
-        Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial to use.
+      <p id="paragraph-of-limitations-heading" >
+        Although BMI is often a practical indicator of healthy weight, it is not suited for every person.<br> Specific groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial to use.
       </p>
 
     <div id="limitations-cards-container">  
@@ -176,7 +183,8 @@
         </div>
         <p>The development and body fat composition of girls and boys vary with age. Consequently, a child's age and gender are considered when evaluating their BMI.</p>
       </div>
-
+    </div>
+   
       <div id="age" class="limitations-card">
         <div class="card-title">
             <img src="/assets/fundamentals/starter-code/assets/images/icon-age.svg" alt="Gender icon" /> 
@@ -184,7 +192,9 @@
         </div>
         <p>In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content.</p>
       </div>
+    </div>  
 
+    <div id="second-grid-row-limitations">
       <div id="muscle" class="limitations-card">
         <div class="card-title">
             <img src="/assets/fundamentals/starter-code/assets/images/icon-muscle.svg" alt="Gender icon" /> 
@@ -192,7 +202,7 @@
         </div>
         <p>BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from fat.</p>
       </div>
-
+   
       <div id="pregnancy" class="limitations-card">
         <div class="card-title">
             <img src="/assets/fundamentals/starter-code/assets/images/icon-pregnancy.svg" alt="Gender icon" /> 
@@ -200,7 +210,9 @@
         </div>
         <p>Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise health risks for both mother and child.</p>
       </div>
+     </div> 
 
+    <div id="third-grid-row-limitations">
       <div id="race" class="limitations-card">
         <div class="card-title">
             <img src="/assets/fundamentals/starter-code/assets/images/icon-race.svg" alt="Gender icon" /> 
@@ -209,7 +221,6 @@
         <p>Certain health concerns may affect individuals of some Black and Asian origins at lower BMIs than others. To learn more, it is advised to discuss this with your GP or practice nurse.</p>
       </div>
     </div>
-
     </section>
 
   </main>
@@ -217,7 +228,6 @@
   <footer>
     <p>Challenge by <a id="frontend-mentor" href="https://www.frontendmentor.io" target="_blank" rel="noopener noreferrer">Frontend Mentor</a></p>
     <p>Coded by <a id="xtralvl" href="https://github.com/xtralvl" target="_blank" rel="noopener noreferrer">@xtralvl</a></p>
-
   </footer>
 
 <!-- JAVASCRIPT -->

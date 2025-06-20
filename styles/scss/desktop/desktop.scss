@@ -6,11 +6,7 @@
 
 /* === HTML AND BODY === */  
 
-* {
-    outline: 1px solid red;
-  }
   
-
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -20,50 +16,66 @@ html,body {
     margin: 0;
     padding: 0;
     text-align: center;
-} 
-
-#logo {
-    margin: 2rem 0 0 0;
-    width: 2.5rem;
 }
 
-/* === HERO === */
-header {
-    @include mx.light-blue-gradient-bg;
+
+
+/* HERO AND FORM WRAPPER ON DESKTOP */
+
+
+#hero-and-form-wrapper-for-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    margin: 3rem 4rem;
+
+    #background-overlay-desktop-header {
+      position: absolute;
+      @include mx.light-blue-gradient-bg;
+      width: 100%;
+      height: 90%;
+      margin: -20rem;
+      z-index: -2;
+      border-radius: 0 0 15px 0;
+
+    }
+
+
+    /* === HERO === */
+    header {
     width: 100%;
-    height: 35rem;
-    border-radius: var.$radius-15; 
+    height: auto;
+    border-radius: var.$radius-15;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    text-align: left; 
 
-    .header-content {
-        text-align: center;
-    }
+        #logo {
+            width: 2.5rem;
+        }
 
-    h1 {
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-        color: var.$primary-header-color-greyish;
-        font-size: 2.4rem;
-    }
+        h1 {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: var.$primary-header-color-greyish;
+            font-size: 2.4rem;
+            
+        }
+    
+        p {
+            color: var.$primary-paragraph-color-greyish;
+            margin: 0;
+            font-size: 1.1rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }    
+    
 
-    p {
-        color: var.$primary-paragraph-color-greyish;
-        font-size: 1.1rem;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
 }
-
-/* === DIFFERENT SECTIONS === */
-.header-content,
-main {
-    padding: 0 1.5rem;
-   
-}
-
+// === END OF HEADER === //
 
 /* === FORM === */
 form {
-    padding: 0.5rem;
+  margin-left: 1.8rem;
     position: relative;
-    top: -14rem;
     background-color: white;
     border-radius: var.$radius-15;
     display: grid;
@@ -157,7 +169,7 @@ form {
 
       .measure-container-metric {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.75rem;
       
         label {
@@ -331,7 +343,7 @@ form {
         margin: 1.5rem 1rem;
         border-radius: 15px 70px 70px 15px;
         text-align: left;
-        padding: 1rem 4rem 1rem 1.5rem;
+        padding: 0rem 4rem 0.4rem 1.5rem;
         color: white;
         
         p {
@@ -340,101 +352,160 @@ form {
     }
 }
 /* === END OF FORM === */
-
+}
 
 /* === DETAILS AND SUGGESTIONS === */
 #healthy-habits {
     background-color: hsl(208, 65%, 88, 0.15);
-    margin: 6rem -1.43rem 3rem -1.43rem; 
+    margin: 3rem 1.5rem; 
     padding: 2rem;
+    display: flex;
+    border-radius: var.$radius-15;
+
 
     #healthy-eating-container,
     #regular-exercise-container,
     #adequate-sleep-container {
         display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
         padding: 0 !important;
+        text-align: left;
 
         img {
-            grid-column: 1;
             grid-row: 1;
             width: 3rem;
-            margin-top: 1rem;
         }
 
         h5 {
-            grid-column: 1;
-            margin-left: 5rem;
-            grid-row: 1;
+            grid-row: 2;
             font-family: var.$primary-font;
             color: var.$primary-header-color-greyish;
             font-size: 1rem;
-              
         }
 
         p {
-            grid-column: 1 / 3;
-            grid-row: 2;
+            grid-row: 3;
             font-family: var.$primary-font;
             color: var.$primary-paragraph-color-greyish;
             font-size: .9rem;
+            padding-right:  1rem;
         }
     }
 }
+
 
 #man-photo-and-longer-suggestions-container-tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     align-items: center;
-    margin:-8rem -1rem 1rem -2rem; 
-}
+    padding: 0rem 2rem;
 
-#man-eating {
-    max-width: 100%;
-    position: relative;
-    margin-bottom: 0;
-}
+    #man-eating {
+      max-width: 80%;
+      position: relative;
+      margin: 1.5rem;
+      grid-column: 1;
+      grid-row: 1 / 3;
+  }
+  
+    #left-curve-line {
+      height: 9rem;
+      grid-column: 2;
+      grid-row: 1;
+      margin-bottom: 0;
+      padding-right: 3rem;
+      justify-self: flex-end;
+      padding-top: .1rem;
 
 
-#details-and-suggestions-container {
-    text-align: left;
-    padding: 1rem 1rem 1rem 1.5rem;
-
-
-    h4 {
-        font-size: 1.7rem;
-        font-family: var.$primary-font;
-        font-weight:normal;
     }
 
-    #text-of-suggestions-based-on-result {
-        margin-top: -1rem;
-        margin-bottom: 3rem;
-        font-family: var.$primary-font;
-        font-size: .9rem;
-        color: var.$primary-paragraph-color-greyish;
+    #details-and-suggestions-container {
+      margin-top: 1rem;
+        text-align: left;
+        padding: 1rem;
+    
+        h4 {
+            font-size: 1.7rem;
+            font-family: var.$primary-font;
+            font-weight:normal;
+        }
+    
+        #text-of-suggestions-based-on-result {
+            margin-top: -1rem;
+            margin-bottom: 3rem;
+            font-family: var.$primary-font;
+            font-size: .9rem;
+            color: var.$primary-paragraph-color-greyish;
+        }
     }
+    
+    
 }
+
+
+
 
 /* === LIMITATIONS === */
 
 #limitations {
+    margin: 3rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
 
-    padding-left: 1rem;
-    padding-right: 1rem;
+/* === FIRST ROW IN LIMITATIONS === */    
 
-    #limitations-cards-container {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        margin-bottom: 2.5rem;
+    #first-grid-row-desktop {
+     grid-row: 1;
+     display: grid;
+     grid-template-columns: auto auto;
+     grid-row: auto auto;
+     text-align: left;
 
-        #race {
-            grid-column: 1 / 3;
-            margin-left: 9rem;
-            margin-right: 9rem;
-        }
+     h5 {
+      grid-column: 1;
+      grid-row: 1;
+      top: 0;
+      margin: 0;
+     }
+
+     #paragraph-of-limitations-heading {
+      grid-column: 1;
+      grid-row: 2;
+      margin: -8.5rem 0 0 0;
+      padding: 0 4rem 0 0;
+
+     }
+
+     .limitations-card {
+      width: 70%;
+      grid-row: 1 / 3;
+      grid-column: 2;
+      align-self: center;
+      margin: 0 1rem;
+      justify-self: center;
+
+     }
+
+
+    }
+
+/* === SECOND ROW IN LIMITATIONS === */    
+
+    #second-grid-row-desktop {
+      grid-row: 2;
+      display: flex;
+
+    }
+
+/* === THIRD ROW IN LIMITATIONS === */    
+
+
+    #third-grid-row-desktop {
+      grid-row: 3;
+      display: flex;
 
     }
 
@@ -453,9 +524,6 @@ form {
     }
 
     .limitations-card {
-        display: grid;
-        grid-template-rows: auto 1fr;
-        grid-template-columns: 1fr 1fr;
         border-radius: var.$radius-15;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         height: auto;
@@ -492,7 +560,10 @@ footer {
 
     p {
         margin: .3rem;
-        font-size: .8rem;
+        font-size: .7rem;
+        font-family: var.$primary-font;
+        
+
     }
 
     a {

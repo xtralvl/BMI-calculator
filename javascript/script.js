@@ -3,13 +3,14 @@ const metricButton = document.getElementById('metric');
 const imperialButton = document.getElementById('imperial')
 
 // === INPUTS BY CATEGORY === //
-const imperialInputs = document.getElementsByClassName('measure-container-imperial');
-const metricInputs = document.getElementsByClassName('measure-container-metric');
+const metricInputs = document.querySelectorAll('.measure-container-metric');
+const imperialInputs = document.querySelectorAll('.measure-container-imperial');
 
 // === INPUTS ONE BY ONE === //
 // metric
 const metricHeight = document.getElementById('height-metric');
 const metricWeight = document.getElementById('weight-metric');
+const metricInputWrapper = document.getElementsByClassName('measure-container-metric');
 // imperial
 const feetInput = document.getElementById('height-ft');
 const inchInput = document.getElementById('height-in');
@@ -44,7 +45,7 @@ const resultParagraph = document.getElementById('generated-results-paragraph');
 const longerSuggestions = document.getElementById('longer-suggestions');
 
 // === MEASUREMENT CHANGER FUNCTION === //
-function swithToImperial() {
+function switchToImperial() {
     imperialButton.addEventListener('change', () => {
 
         if (imperialButton.checked) {
@@ -57,22 +58,22 @@ function swithToImperial() {
           }  
         })
     };      
-swithToImperial();
+switchToImperial();
 
-function swithToMetric() {
+function switchToMetric() {
     metricButton.addEventListener('change', () => {
 
         if (metricButton.checked) {
             for (const element of metricInputs) {
-                element.style.display = 'block';
+                element.style.display = 'flex';
             }    
             for (const element of imperialInputs) {
                 element.style.display = 'none';
-            }   
+            }
           }  
         })
     };      
-swithToMetric();
+switchToMetric();
 
 
 // === FORM VALIDATION === //
