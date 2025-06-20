@@ -1,6 +1,6 @@
 /* === RADIUS === */
 /* === FONT FAMILY AND FONT COLOR === */
-@media (min-width: 901px) {
+@media (min-width: 901px) and (max-width: 1300px) {
   /* === HTML AND BODY === */
   *, *::before, *::after {
     box-sizing: border-box;
@@ -24,7 +24,7 @@
     position: absolute;
     background: linear-gradient(to left, hsl(208, 65%, 88%), hsl(0, 0%, 100%));
     width: 100%;
-    height: 90%;
+    height: 105%;
     margin: -20rem;
     z-index: -2;
     border-radius: 0 0 15px 0;
@@ -323,7 +323,7 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: rgba(0, 0, 0, 0.5);
     font-size: 0.9rem;
-    padding-right: 1rem;
+    padding-right: 2rem;
   }
   #man-photo-and-longer-suggestions-container-tablet {
     display: grid;
@@ -340,16 +340,16 @@
     grid-row: 1/3;
   }
   #man-photo-and-longer-suggestions-container-tablet #left-curve-line {
-    height: 9rem;
+    height: 10rem;
     grid-column: 2;
     grid-row: 1;
     margin-bottom: 0;
     padding-right: 3rem;
     justify-self: flex-end;
-    padding-top: 0.1rem;
+    margin-top: -1rem;
   }
   #man-photo-and-longer-suggestions-container-tablet #details-and-suggestions-container {
-    margin-top: 1rem;
+    margin-top: -6rem;
     text-align: left;
     padding: 1rem;
   }
@@ -368,46 +368,7 @@
   /* === LIMITATIONS === */
   #limitations {
     margin: 3rem;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    /* === FIRST ROW IN LIMITATIONS === */
-    /* === SECOND ROW IN LIMITATIONS === */
-    /* === THIRD ROW IN LIMITATIONS === */
-  }
-  #limitations #first-grid-row-desktop {
-    grid-row: 1;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-row: auto auto;
     text-align: left;
-  }
-  #limitations #first-grid-row-desktop h5 {
-    grid-column: 1;
-    grid-row: 1;
-    top: 0;
-    margin: 0;
-  }
-  #limitations #first-grid-row-desktop #paragraph-of-limitations-heading {
-    grid-column: 1;
-    grid-row: 2;
-    margin: -8.5rem 0 0 0;
-    padding: 0 4rem 0 0;
-  }
-  #limitations #first-grid-row-desktop .limitations-card {
-    width: 70%;
-    grid-row: 1/3;
-    grid-column: 2;
-    align-self: center;
-    margin: 0 1rem;
-    justify-self: center;
-  }
-  #limitations #second-grid-row-desktop {
-    grid-row: 2;
-    display: flex;
-  }
-  #limitations #third-grid-row-desktop {
-    grid-row: 3;
-    display: flex;
   }
   #limitations #limitations-heading {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -415,6 +376,11 @@
     font-weight: lighter;
     margin-top: 5rem;
     font-size: 1.8rem;
+    top: 0;
+    margin: 0;
+  }
+  #limitations #paragraph-of-limitations-heading {
+    padding-right: 5rem;
   }
   #limitations p {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -422,6 +388,7 @@
     font-size: 0.9rem;
   }
   #limitations .limitations-card {
+    width: 70%;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     height: auto;

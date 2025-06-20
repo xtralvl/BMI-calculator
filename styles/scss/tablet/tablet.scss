@@ -423,11 +423,11 @@ form {
     padding-right: 1rem;
     display: grid;
     grid-template-rows: auto auto auto;
-    gap: 2rem;
 
     /* === FIRST ROW IN LIMITATIONS === */    
 
     #first-grid-row-limitations {
+      
       grid-row: 1;
       display: grid;
       grid-template-columns: auto auto;

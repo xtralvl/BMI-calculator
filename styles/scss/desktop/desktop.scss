@@ -2,7 +2,7 @@
 @use '../helpers/variables/variables' as var;
 
 
-@media (min-width: 901px) {
+@media (min-width: 901px) and (max-width: 1300px) {
 
 /* === HTML AND BODY === */  
 
@@ -33,11 +33,10 @@ html,body {
       position: absolute;
       @include mx.light-blue-gradient-bg;
       width: 100%;
-      height: 90%;
+      height: 105%;
       margin: -20rem;
       z-index: -2;
       border-radius: 0 0 15px 0;
-
     }
 
 
@@ -389,7 +388,7 @@ form {
             font-family: var.$primary-font;
             color: var.$primary-paragraph-color-greyish;
             font-size: .9rem;
-            padding-right:  1rem;
+            padding-right: 2rem;
         }
     }
 }
@@ -411,19 +410,19 @@ form {
   }
   
     #left-curve-line {
-      height: 9rem;
+      height: 10rem;
       grid-column: 2;
       grid-row: 1;
       margin-bottom: 0;
       padding-right: 3rem;
       justify-self: flex-end;
-      padding-top: .1rem;
+      margin-top: -1rem;
 
 
     }
 
     #details-and-suggestions-container {
-      margin-top: 1rem;
+      margin-top: -6rem;
         text-align: left;
         padding: 1rem;
     
@@ -446,68 +445,11 @@ form {
 }
 
 
-
-
 /* === LIMITATIONS === */
 
 #limitations {
     margin: 3rem;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-
-/* === FIRST ROW IN LIMITATIONS === */    
-
-    #first-grid-row-desktop {
-     grid-row: 1;
-     display: grid;
-     grid-template-columns: auto auto;
-     grid-row: auto auto;
-     text-align: left;
-
-     h5 {
-      grid-column: 1;
-      grid-row: 1;
-      top: 0;
-      margin: 0;
-     }
-
-     #paragraph-of-limitations-heading {
-      grid-column: 1;
-      grid-row: 2;
-      margin: -8.5rem 0 0 0;
-      padding: 0 4rem 0 0;
-
-     }
-
-     .limitations-card {
-      width: 70%;
-      grid-row: 1 / 3;
-      grid-column: 2;
-      align-self: center;
-      margin: 0 1rem;
-      justify-self: center;
-
-     }
-
-
-    }
-
-/* === SECOND ROW IN LIMITATIONS === */    
-
-    #second-grid-row-desktop {
-      grid-row: 2;
-      display: flex;
-
-    }
-
-/* === THIRD ROW IN LIMITATIONS === */    
-
-
-    #third-grid-row-desktop {
-      grid-row: 3;
-      display: flex;
-
-    }
+    text-align: left;
 
     #limitations-heading {
         font-family: var.$primary-font;
@@ -515,7 +457,14 @@ form {
         font-weight: lighter;
         margin-top: 5rem;
         font-size: 1.8rem;
+        top: 0;
+        margin: 0;
     }
+
+    #paragraph-of-limitations-heading {
+      padding-right: 5rem;
+    }
+    
 
     p {
         font-family: var.$primary-font;
@@ -524,6 +473,7 @@ form {
     }
 
     .limitations-card {
+        width: 70%;
         border-radius: var.$radius-15;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         height: auto;
