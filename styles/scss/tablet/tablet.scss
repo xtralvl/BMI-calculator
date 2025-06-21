@@ -422,98 +422,40 @@ form {
     padding-left: 1rem;
     padding-right: 1rem;
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
 
-    /* === FIRST ROW IN LIMITATIONS === */    
 
-    #first-grid-row-limitations {
-      
+    #limitations-heading-and-paragraph-container {
+      grid-column: 1 / 3;
       grid-row: 1;
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-template-rows: auto auto 1fr;
- 
+
       #limitations-heading {
-       grid-column: 1 / 3;
-       grid-row: 1;
-      }
- 
-      #paragraph-of-limitations-heading {
-       grid-column: 1 / 3;
-       grid-row: 2;
-       margin-top: -2rem;
-       margin-bottom: 4rem;
-      }
- 
-      #gender {
-       width: 90%;
-       grid-row: 3;
-       grid-column: 1;
-       align-self: center;
-       justify-self: center;
-      }
-
-      #age {
-        width: 90%;
-        grid-row: 3;
-        grid-column: 2;
-        align-self: center;
-        justify-self: center;
-       }
-     }
- 
- /* === SECOND ROW IN LIMITATIONS === */    
- 
- #second-grid-row-limitations {
-  grid-row: 2;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
-
-
-  #muscle {
-   width: 90%;
-   grid-row: 1;
-   grid-column: 1;
-   align-self: center;
-   justify-self: center;
-  }
-
-  #pregnancy {
-    width: 90%;
-    grid-row: 1;
-    grid-column: 2;
-    align-self: center;
-    justify-self: center;
-   }
- }
-
-
- /* === THIRD ROW IN LIMITATIONS === */    
- 
- 
- #third-grid-row-limitations {
-  grid-row: 3;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
-
-
-  #race {
-   width: 50%;
-   grid-row: 1 / 3;
-   align-self: center;
-   justify-self: center;
-  }
-
- }
- 
-    #limitations-heading {
         font-family: var.$primary-font;
         color: var.$primary-header-color-greyish;
         font-weight: lighter;
         font-size: 1.8rem;
     }
+   
+      #paragraph-of-limitations-heading {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    }
+
+    #race {
+      grid-column: 1 / 3;
+      width: 45%;
+    }
+
+    .limitations-card {
+      width: 90%;
+      align-self: center;
+      justify-self: center;
+
+    } 
 
     p {
         font-family: var.$primary-font;
