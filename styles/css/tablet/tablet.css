@@ -317,7 +317,8 @@
     color: rgba(0, 0, 0, 0.5);
     font-size: 0.9rem;
   }
-  #left-curve-line {
+  #left-curve-line,
+  #right-curved-line {
     display: none;
   }
   #man-photo-and-longer-suggestions-container-tablet {

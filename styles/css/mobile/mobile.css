@@ -274,7 +274,8 @@
     font-size: 0.9rem;
   }
   /* === END OF FORM === */
-  #left-curve-line {
+  #left-curve-line,
+  #right-curved-line {
     display: none;
   }
   #man-eating {

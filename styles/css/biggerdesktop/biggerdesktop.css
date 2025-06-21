@@ -390,13 +390,13 @@
     grid-row: 1;
     grid-column: 2;
     margin-top: 7.5rem;
-    margin-bottom: 0;
-    margin-left: -2rem;
+    margin-bottom: -2rem;
+    margin-left: -3.5rem;
   }
   #limitations #age,
   #limitations #muscle {
     grid-row: 3;
-    margin-top: -2rem;
+    margin-top: -3.5rem;
   }
   #limitations #pregnancy,
   #limitations #race {
@@ -404,16 +404,16 @@
     margin-top: -2rem;
   }
   #limitations #age {
-    margin-right: -18rem;
+    margin-right: -10rem;
   }
   #limitations #muscle {
-    margin-left: 4rem;
+    margin-left: -12rem;
   }
   #limitations #pregnancy {
     margin-right: 0;
   }
   #limitations #race {
-    margin-left: -14rem;
+    margin-left: -22rem;
   }
   #limitations .limitations-card {
     width: 85%;
@@ -476,6 +476,7 @@
     color: red;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     display: none;
+    padding: 1rem;
   }
 }
 

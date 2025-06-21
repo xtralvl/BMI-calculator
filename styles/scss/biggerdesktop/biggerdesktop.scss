@@ -419,6 +419,7 @@ form {
       margin-top: -1rem;
     }
 
+
     #details-and-suggestions-container {
       margin-top: -6rem;
         text-align: left;
@@ -474,15 +475,15 @@ form {
     grid-row: 1;
     grid-column: 2;
     margin-top: 7.5rem;
-    margin-bottom: 0;
-    margin-left: -2rem;
+    margin-bottom: -2rem;
+    margin-left: -3.5rem;
 
   }
 
   #age,
   #muscle {
     grid-row: 3;
-    margin-top: -2rem;
+    margin-top: -3.5rem;
   }
 
   #pregnancy,
@@ -493,11 +494,11 @@ form {
   }
 
   #age {
-    margin-right: -18rem;
+    margin-right: -10rem;
   }
 
   #muscle {
-    margin-left: 4rem;
+    margin-left: -12rem;
   }
 
   #pregnancy {
@@ -505,7 +506,7 @@ form {
   }
 
   #race {
-    margin-left: -14rem;
+    margin-left: -22rem;
   }
 
 
@@ -591,6 +592,7 @@ footer {
     color: red;
     font-family: var.$primary-font;
     display: none;
+    padding: 1rem;
 }
 
 }
