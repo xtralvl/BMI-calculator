@@ -72,7 +72,7 @@
   #hero-and-form-wrapper-for-desktop form fieldset {
     border: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }

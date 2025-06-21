@@ -89,11 +89,11 @@ form {
     }
 
     fieldset {
-        border: none;
-        display: flex;
-        justify-content: space-between; 
-        align-items: center;
-        font-family: var.$primary-font;
+      border: none;
+      display: flex;
+      justify-content: flex-start; 
+      align-items: center;
+      font-family: var.$primary-font;
 
         .sr-only {
             position: absolute !important;

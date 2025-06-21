@@ -90,9 +90,10 @@ form {
 
     fieldset {
         border: none;
-        display: flex;
-        justify-content: space-between; 
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: flex-start; 
+        align-items: flex;
         font-family: var.$primary-font;
 
         .sr-only {
@@ -137,6 +138,7 @@ form {
                 border: 1px solid #ccc;
                 background-color: transparent;
                 transition: all 0.3s ease;
+                
               } 
           
               &::after {
@@ -150,6 +152,7 @@ form {
                 border-radius: 50%;
                 background-color: transparent;
                 transition: background-color 0.3s ease;
+                
               }
             } 
             
@@ -241,6 +244,18 @@ form {
       }
 
     /* === IMPERIAL === */
+
+    #metric-radio-button-container {
+      justify-self: flex-start;
+      margin-left: -.8rem !important;
+    }
+
+    #imperial-radio-button-container {
+      justify-self: flex-start;
+      padding-left: .5rem;
+    }
+
+
 
       .measure-container-imperial {
         display: flex;
