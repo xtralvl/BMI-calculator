@@ -1,6 +1,6 @@
 /* === RADIUS === */
 /* === FONT FAMILY AND FONT COLOR === */
-@media (min-width: 901px) and (max-width: 1199px) {
+@media (min-width: 1200px) {
   /* === HTML AND BODY === */
   *, *::before, *::after {
     box-sizing: border-box;
@@ -479,4 +479,4 @@
   }
 }
 
-/*# sourceMappingURL=desktop.css.map */
+/*# sourceMappingURL=biggerdesktop.css.map */
