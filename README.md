@@ -6,7 +6,7 @@ The goal of this project was to create a responsive and accessible BMI calculato
 
 ## 🚀 Live Site
 
-👉 [View Live](https://your-netlify-url.netlify.app](https://bmi-calculator-xtralvl.netlify.app/ ) <!-- Replace with your actual Netlify link -->
+👉 [View Live](https://bmi-calculator-xtralvl.netlify.app/) 
 
 ## 🛠️ Technologies Used
 
